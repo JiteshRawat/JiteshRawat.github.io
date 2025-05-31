@@ -52,7 +52,7 @@
   </style>
 </head>
 <body class="theme-orange" id="body">
-  <button class="theme-toggle" id="themeToggle">🌙</button>
+  <button class="theme-toggle" id="themeToggle">☀️</button>
   
   <!-- Back to top button -->
   <div class="btn-back_to_top">
@@ -357,11 +357,15 @@
     const themeToggle = document.getElementById('themeToggle');
     const body = document.getElementById('body');
     
-    // Check for saved theme preference
+    // Check for saved theme preference, default to dark
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'light') {
+      body.classList.remove('theme-dark');
+      themeToggle.textContent = '🌙';
+    } else {
       body.classList.add('theme-dark');
       themeToggle.textContent = '☀️';
+      if (!savedTheme) localStorage.setItem('theme', 'dark');
     }
     
     themeToggle.addEventListener('click', () => {
