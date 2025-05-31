@@ -1,0 +1,146 @@
+/* Dark Theme Styles */
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-secondary: #252525;
+  --dark-card: #2d2d2d;
+  --dark-border: #404040;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent: #fd7e14;
+  --accent-hover: #e86e0f;
+}
+
+/* Base Theme */
+body.theme-dark {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+div .title {
+    color: white !important;
+}
+
+/* Sections */
+.theme-dark .vg-page {
+  background-color: var(--dark-bg);
+}
+
+.theme-dark .vg-page.page-about {
+  background-color: var(--dark-secondary);
+}
+
+/* Text Colors */
+.theme-dark .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+.theme-dark .fg-theme {
+  color: var(--accent) !important;
+}
+
+.theme-dark h1, 
+.theme-dark h2, 
+.theme-dark h3, 
+.theme-dark h4, 
+.theme-dark h5, 
+.theme-dark h6 {
+  color: var(--text-primary);
+}
+
+/* Buttons */
+.theme-dark .btn-theme-outline {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: transparent;
+}
+
+.theme-dark .btn-theme-outline:hover {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* Cards */
+.theme-dark .card {
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+}
+
+.theme-dark .card .caption {
+  background-color: var(--dark-card);
+}
+
+/* Timeline */
+.theme-dark .timeline .title {
+  color: var(--text-secondary);
+}
+
+.theme-dark .timeline li::before {
+  background-color: var(--dark-border);
+}
+
+.theme-dark .timeline .details {
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+}
+
+/* Portfolio */
+.theme-dark .gridder .grid-item {
+  background-color: var(--dark-card);
+}
+
+.theme-dark .img-place:hover .img-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Footer */
+.theme-dark .vg-footer {
+  background-color: var(--dark-secondary);
+}
+
+.theme-dark .vg-footer a {
+  color: var(--text-secondary);
+}
+
+.theme-dark .vg-footer a:hover {
+  color: var(--accent);
+}
+
+/* Blog Section */
+.theme-dark .post-grid .caption {
+  background-color: var(--dark-card);
+}
+
+.theme-dark .post-grid .post-category {
+  color: var(--accent);
+}
+
+.theme-dark .post-grid .post-title {
+  color: var(--text-primary);
+}
+
+/* Badges */
+.theme-dark .badge-subhead {
+  color: var(--text-primary);
+  background-color: var(--dark-card);
+  border: 1px solid var(--dark-border);
+}
+
+/* Back to Top Button */
+.theme-dark .btn-back_to_top {
+  background-color: var(--accent);
+  color: var(--text-primary);
+}
+
+/* Skills Section */
+.theme-dark .progress {
+  background-color: var(--dark-border);
+}
+
+.theme-dark .progress-bar {
+  background-color: var(--accent);
+}
+
+/* Transitions */
+.theme-dark * {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -29,8 +29,30 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/virtual.css">
   
   <link rel="stylesheet" type="text/css" href="./assets/css/topbar.virtual.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/dark-theme.css">
+  
+  <!-- Theme Toggle Button -->
+  <style>
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: none;
+      border: 0px;
+      color: none;
+      /* padding: 10px 20px; */
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .theme-toggle:hover {
+      background: #e86e0f;
+    }
+  </style>
 </head>
-<body class="theme-orange">
+<body class="theme-orange" id="body">
+  <button class="theme-toggle" id="themeToggle">🌙</button>
   
   <!-- Back to top button -->
   <div class="btn-back_to_top">
@@ -330,5 +352,29 @@
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
   
+  <script>
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.getElementById('body');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('theme-dark');
+      themeToggle.textContent = '☀️';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('theme-dark')) {
+        body.classList.remove('theme-dark');
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('theme-dark');
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 </html>
